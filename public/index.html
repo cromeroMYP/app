@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Base de Datos Online</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📊 Base de Datos Online</h1>
+    
+    <div class="form-section">
+      <h2>Agregar Nuevo Registro</h2>
+      <form id="registroForm">
+        <div class="form-group">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" placeholder="Ingrese el nombre" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="puntaje">Puntaje:</label>
+          <input type="number" id="puntaje" placeholder="Ingrese el puntaje" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="porcentaje">Porcentaje (%):</label>
+          <input type="number" id="porcentaje" placeholder="Ingrese el porcentaje" step="0.01" required>
+        </div>
+        
+        <button type="submit" class="btn-primary">Agregar Registro</button>
+      </form>
+    </div>
+
+    <div class="table-section">
+      <h2>Registros</h2>
+      <div id="tabla-container">
+        <table id="registrosTable">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nombre</th>
+              <th>Puntaje</th>
+              <th>Porcentaje</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="registrosBody">
+            <tr>
+              <td colspan="5" class="no-data">Cargando registros...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal para editar -->
+  <div id="editModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Editar Registro</h2>
+      <form id="editForm">
+        <input type="hidden" id="editId">
+        <div class="form-group">
+          <label for="editNombre">Nombre:</label>
+          <input type="text" id="editNombre" required>
+        </div>
+        <div class="form-group">
+          <label for="editPuntaje">Puntaje:</label>
+          <input type="number" id="editPuntaje" required>
+        </div>
+        <div class="form-group">
+          <label for="editPorcentaje">Porcentaje (%):</label>
+          <input type="number" id="editPorcentaje" step="0.01" required>
+        </div>
+        <button type="submit" class="btn-primary">Guardar Cambios</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
