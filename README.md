@@ -1,130 +1,60 @@
-# Base de Datos Online
+# Formulario de Registro - Aplicación Web
 
-Una aplicación web simple para crear, leer, actualizar y eliminar registros con **nombre**, **puntaje** y **porcentaje**.
+Una aplicación web simple para registrar nombres y edades con almacenamiento local.
 
-## 🚀 Características
+## Características
 
-- ✅ Agregar nuevos registros
-- ✅ Ver todos los registros en una tabla
-- ✅ Editar registros existentes
-- ✅ Eliminar registros
-- ✅ Interfaz responsive y moderna
-- ✅ Base de datos local SQLite
+✨ **Formulario interactivo** - Ingresa nombre y edad fácilmente
+📊 **Tabla de registros** - Visualiza todos los registros guardados
+💾 **Almacenamiento local** - Los datos se guardan en el navegador (localStorage)
+🗑️ **Eliminar registros** - Opción para borrar registros individuales
+📱 **Diseño responsivo** - Funciona en dispositivos móviles y de escritorio
+🎨 **Interfaz moderna** - Diseño atractivo con gradientes y animaciones
 
-## 📋 Requisitos
+## Archivos del Proyecto
 
-- Node.js (v14 o superior)
-- npm
+- **index.html** - Estructura HTML del formulario y tabla
+- **style.css** - Estilos y diseño de la aplicación
+- **script.js** - Lógica JavaScript para manejar formularios y datos
+- **README.md** - Este archivo de documentación
 
-## 🔧 Instalación
+## Cómo Usar
 
-1. Clonar el repositorio:
-```bash
-git clone https://github.com/cromeroMYP/app.git
-cd app
-```
+1. Abre el archivo `index.html` en tu navegador
+2. Completa el formulario con:
+   - **Nombre**: Cualquier nombre válido
+   - **Edad**: Un número entre 1 y 120
+3. Haz clic en "Registrar"
+4. Los datos se mostrarán en la tabla automáticamente
+5. Para eliminar un registro, haz clic en el botón "Eliminar"
 
-2. Instalar dependencias:
-```bash
-npm install
-```
+## Tecnologías Utilizadas
 
-3. Iniciar el servidor:
-```bash
-npm start
-```
+- **HTML5** - Estructura del sitio
+- **CSS3** - Estilos y diseño responsivo
+- **JavaScript (Vanilla)** - Lógica sin frameworks
+- **localStorage** - Almacenamiento de datos en el navegador
 
-4. Abrir en el navegador:
-```
-http://localhost:3000
-```
+## Almacenamiento de Datos
 
-## 📁 Estructura del Proyecto
+Los datos se almacenan en `localStorage` del navegador, lo que significa:
+- ✅ Los datos persisten incluso si cierras el navegador
+- ✅ No requiere servidor backend
+- ✅ Los datos se almacenan localmente en tu dispositivo
 
-```
-app/
-├── server.js              # Servidor Express y API REST
-├── package.json           # Dependencias del proyecto
-├── database.db           # Base de datos SQLite (se crea automáticamente)
-├── public/
-│   ├── index.html        # Interfaz HTML
-│   ├── styles.css        # Estilos CSS
-│   └── app.js            # Lógica JavaScript
-└── README.md             # Este archivo
-```
+## Validaciones
 
-## 🔌 API REST
+- Campo de nombre es obligatorio
+- Campo de edad es obligatorio
+- La edad debe estar entre 1 y 120
 
-### GET - Obtener todos los registros
-```
-GET /api/registros
-```
+## Características Adicionales
 
-### GET - Obtener un registro
-```
-GET /api/registros/:id
-```
+- Mensajes de confirmación al registrar
+- Confirmación antes de eliminar registros
+- Animaciones suave en botones
+- Interfaz intuitiva y fácil de usar
 
-### POST - Crear nuevo registro
-```
-POST /api/registros
-Body: {
-  "nombre": "Juan",
-  "puntaje": 85,
-  "porcentaje": 92.5
-}
-```
+---
 
-### PUT - Actualizar un registro
-```
-PUT /api/registros/:id
-Body: {
-  "nombre": "Juan",
-  "puntaje": 90,
-  "porcentaje": 95.0
-}
-```
-
-### DELETE - Eliminar un registro
-```
-DELETE /api/registros/:id
-```
-
-## 💻 Tecnologías Usadas
-
-- **Backend:** Node.js, Express.js
-- **Base de Datos:** SQLite3
-- **Frontend:** HTML5, CSS3, Vanilla JavaScript
-- **CORS:** Habilitado para desarrollo
-
-## 📝 Ejemplo de Uso
-
-1. Llena el formulario con:
-   - Nombre: "María"
-   - Puntaje: 95
-   - Porcentaje: 98.5
-
-2. Click en "Agregar Registro"
-3. El registro aparecerá en la tabla
-4. Puedes editar o eliminar registros con los botones
-
-## 🚀 Despliegue
-
-Para desplegar en producción:
-
-- **Heroku:** 
-  ```bash
-  heroku create tu-app
-  git push heroku main
-  ```
-
-- **Vercel:** Configurar `server.js` como función serverless
-- **Firebase:** Migrar a Firebase Realtime Database
-
-## 📄 Licencia
-
-MIT
-
-## 👤 Autor
-
-cromeroMYP
+**Creado con ❤️ para registrar información de forma simple y segura**
